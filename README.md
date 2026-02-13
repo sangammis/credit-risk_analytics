@@ -1,11 +1,3 @@
-📊 README 1 — Credit Risk Prediction
-
-Create file:
-
-credit-risk-analytics/README.md
-
-
-#  Credit Risk Prediction & Analytics
 
 ##  Project Overview
 
@@ -48,7 +40,7 @@ This project analyzes loan customer data to identify high-risk borrowers and imp
 ![Credit Risk Dashboard](powerbi/screenshot02.png)
 ![Credit Risk Dashboard](powerbi/screenshot03.png)
 ![Credit Risk Dashboard](powerbi/screenshot04.png)
-![Credit Risk Dashboard](powerbi/screenshot05.png)
+
 
 ---
 
