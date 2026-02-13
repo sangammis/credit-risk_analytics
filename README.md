@@ -1,43 +1,57 @@
-# Credit Risk Analytics — Loan Default Prediction
+📊 README 1 — Credit Risk Prediction
 
-## Business Problem
-Financial institutions face significant losses due to loan defaults.  
-The objective of this project is to **analyze customer data**, identify **high-risk segments**, and 
-**predict loan default probability** to support better loan approval decisions.
+Create file:
 
-## Tools & Technologies Used
-- **MySQL** — Data extraction & segmentation analysis  
-- **Python (Pandas, NumPy, Matplotlib, Seaborn)** — EDA & feature engineering  
-- **Machine Learning** — Logistic Regression, XGBoost  
-- **Power BI** — Risk monitoring dashboard  
-- **GitHub** — Version control & portfolio hosting  
+credit-risk-analytics/README.md
 
 
-## Key Metrics Analyzed
-- Default Rate
-- Income Segmentation
-- Credit Score Bands
-- Employment Type Risk
-- Loan Amount vs Default
+#  Credit Risk Prediction & Analytics
+
+##  Project Overview
+
+This project analyzes loan customer data to identify high-risk borrowers and improve credit risk management. Using Python, SQL, Machine Learning, and Power BI, this project provides predictive insights and interactive dashboards for risk monitoring.
+
+---
+
+##  Business Objective
+
+• Predict loan default probability  
+• Identify high-risk customer segments  
+• Improve portfolio risk management  
+• Enable data-driven lending decisions  
+
+---
+
+##  Tools & Technologies
+
+• Python (Pandas, NumPy, Scikit-learn, XGBoost)  
+• SQL (SQLite)  
+• Power BI  
+• Jupyter Notebook  
+
+---
+
+##  Key Analysis Performed
+
+• Data cleaning and preprocessing  
+• Feature engineering  
+• Risk segmentation  
+• Default rate analysis  
+• Predictive modeling using Logistic Regression and XGBoost  
+
+---
+
+##  Power BI Dashboard Preview
 
 
-## Key Insights
+![Credit Risk Dashboard](powerbi/screenshot01.png)
+![Credit Risk Dashboard](powerbi/screenshot02.png)
+![Credit Risk Dashboard](powerbi/screenshot03.png)
+![Credit Risk Dashboard](powerbi/screenshot04.png)
+![Credit Risk Dashboard](powerbi/screenshot05.png)
 
-### High-Risk Segments
-- **Low income customers** show higher default probability  
-- **Credit score < 600** strongly correlates with default  
-- **Contract employees** are riskier than salaried employees  
+---
 
-##  Power BI Dashboard Highlights
-- Total Customers & Default Rate KPIs  
-- Default Rate by Employment Type  
-- Income & Credit Score Risk Segmentation  
-- Interactive slicers for deeper analysis  
+##  Business Impact
 
-
-## Business Recommendations
-- Tighten approval rules for customers with **credit score < 600**
-- Apply stricter checks for **contract-based employment**
-- Offer better loan terms to **low-risk customers**
-
-.
+Provides risk insights to help financial institutions reduce loan defaults and optimize lending strategies.
