@@ -36,11 +36,10 @@ This project analyzes loan customer data to identify high-risk borrowers and imp
 ##  Power BI Dashboard Preview
 
 
-![Credit Risk Dashboard](powerbi/screenshot01.png)
-![Credit Risk Dashboard](powerbi/screenshot02.png)
-![Credit Risk Dashboard](powerbi/screenshot03.png)
-![Credit Risk Dashboard](powerbi/screenshot04.png)
-
+![Credit Risk Dashboard](powerbi/Screenshot01.png)
+![Credit Risk Dashboard](powerbi/Screenshot02.png)
+![Credit Risk Dashboard](powerbi/Screenshot03.png)
+![Credit Risk Dashboard](powerbi/Screenshot04.png)
 
 ---
 
