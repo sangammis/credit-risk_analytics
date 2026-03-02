@@ -4,9 +4,9 @@ import logging
 import os
 
 # logging setup
-os.makedirs("../logs", exist_ok = True)
+os.makedirs("logs", exist_ok = True)
 logging.basicConfig(
-    filename="../logs/pipeline.log",
+    filename="logs/pipeline.log",
     level = logging.INFO, 
     format = '%(asctime)s : %(levelname)s : %(message)s')
 
