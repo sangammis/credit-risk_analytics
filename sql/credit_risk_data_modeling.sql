@@ -32,7 +32,16 @@ CREATE TABLE loan_fact AS
 SELECT 
     customer_id,
     loan_amount,
-    default_flag,
-    credit_score,
-    employment_type
+    default_flag
 FROM loan_customers;
+
+
+SELECT 
+    c.city,
+    e.employment_type,
+    ROUND(AVG(f.default_flag)*100,2) AS default_rate
+FROM loan_fact f
+JOIN customer_dim c ON f.customer_id = c.customer_id
+JOIN employment_dim e ON f.employment_type = e.employment_type
+GROUP BY c.city, e.employment_type
+ORDER BY default_rate DESC;
