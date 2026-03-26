@@ -1,5 +1,20 @@
 -- Credit Risk Analysis - MySQL
 
+
+-- Risk Ranking
+SELECT *,
+       RANK() OVER (ORDER BY credit_score ASC) AS risk_rank
+FROM loan_customers;
+
+
+-- Incomme vs Loan Stress
+SELECT 
+    customer_id,
+    income,
+    loan_amount,
+    (loan_amount / income) AS debt_ratio
+FROM loan_customers;
+
 -- Overall default rate
 SELECT 
     COUNT(*) AS total_customers,

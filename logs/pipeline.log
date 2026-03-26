@@ -3,3 +3,13 @@
 2026-03-02 23:29:31,099 : INFO : Imputed missing credit scores with median
 2026-03-02 23:29:31,100 : ERROR : Column missing in dataset : 'credit_scre'
 2026-03-02 23:29:31,101 : INFO : Pipeline Complete. Cleaned data saved to: data/processed_loan_customers.csv
+2026-03-26 13:45:05,167 : INFO : Pipeline started
+2026-03-26 13:45:05,171 : INFO : Data loaded successfully
+2026-03-26 13:45:05,172 : INFO : Data validation passed
+2026-03-26 13:48:47,124 : INFO : Pipeline started
+2026-03-26 13:48:47,126 : INFO : Data loaded successfully
+2026-03-26 13:48:47,127 : INFO : Data validation passed
+2026-03-26 13:57:37,651 : INFO : Pipeline started
+2026-03-26 13:57:37,656 : INFO : Data loaded successfully
+2026-03-26 13:57:37,658 : INFO : Data validation passed
+2026-03-26 13:57:37,662 : INFO : Pipeline Complete. Cleaned data saved to: data/processed_loan_customers.csv

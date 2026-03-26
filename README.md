@@ -28,8 +28,15 @@ This project analyzes loan customer data to identify high-risk borrowers and imp
 • Data cleaning and preprocessing  
 • Feature engineering  
 • Risk segmentation  
-• Default rate analysis  
-• Predictive modeling using Logistic Regression and XGBoost  
+• Default rate analysis    
+
+---
+
+## Key Insights 
+
+Contract employees show highest default risk (~83%)
+Customers with credit score <600 default significantly more
+High loan-to-income ratio strongly correlates with defaults
 
 ---
 
