@@ -13,3 +13,7 @@
 2026-03-26 13:57:37,656 : INFO : Data loaded successfully
 2026-03-26 13:57:37,658 : INFO : Data validation passed
 2026-03-26 13:57:37,662 : INFO : Pipeline Complete. Cleaned data saved to: data/processed_loan_customers.csv
+2026-03-26 14:14:03,640 : INFO : Pipeline started
+2026-03-26 14:14:03,653 : INFO : Data loaded successfully
+2026-03-26 14:14:03,660 : INFO : Data validation passed
+2026-03-26 14:14:03,666 : INFO : Pipeline Complete. Cleaned data saved to: data/processed_loan_customers.csv

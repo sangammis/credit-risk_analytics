@@ -37,6 +37,22 @@ def validate_data(df):
 
     logging.info("Data validation passed")
     return df
+# Schema Validation
+def enforce_schema(df):
+    schema = {
+        "customer_id": "int64",
+        "age": "int64",
+        "income": "float64",
+        "loan_amount": "float64",
+        "credit_score": "float64",
+        "default_flag": "int64"
+    }
+
+    for col, dtype in schema.items():
+        df[col] = df[col].astype(dtype)
+
+    logging.info("Schema enforcement completed")
+    return df
 
 # Data Cleaning 
 def clean_data(df):
