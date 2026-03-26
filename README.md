@@ -34,9 +34,9 @@ This project analyzes loan customer data to identify high-risk borrowers and imp
 
 ## Key Insights 
 
-Contract employees show highest default risk (~83%)
-Customers with credit score <600 default significantly more
-High loan-to-income ratio strongly correlates with defaults
+* Contract employees show highest default risk (~83%)
+* Customers with credit score <600 default significantly more
+* High loan-to-income ratio strongly correlates with defaults
 
 ---
 
@@ -52,4 +52,7 @@ High loan-to-income ratio strongly correlates with defaults
 
 ##  Business Impact
 
-Provides risk insights to help financial institutions reduce loan defaults and optimize lending strategies.
+* Identified high-risk customer segments such as contract-based employees with significantly higher default rates  
+* Discovered strong correlation between low credit scores (<600) and loan defaults  
+* Enabled risk-based customer segmentation using credit score and income-to-loan ratio  
+* Provided actionable insights to improve loan approval strategies and reduce default risk  
