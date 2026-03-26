@@ -3,14 +3,19 @@ import numpy as np
 import logging
 import os
 
-# logging setup
+# ─────────────────────────────────────
+# LOGGING SETUP
+# ─────────────────────────────────────
 os.makedirs("logs", exist_ok = True)
 logging.basicConfig(
     filename="logs/pipeline.log",
     level = logging.INFO, 
     format = '%(asctime)s : %(levelname)s : %(message)s')
 
-# Data Loading
+
+# ─────────────────────────────────────
+# DATA LOADING
+# ─────────────────────────────────────
 def load_data(path):
     try:
         df = pd.read_csv(path)
@@ -20,7 +25,9 @@ def load_data(path):
         logging.error(f"Error while loading the data : {e}")
         raise
 
-# Data Validation
+# ─────────────────────────────────────
+# DATA VALIDATION
+# ─────────────────────────────────────
 def validate_data(df):
     required_cols = ['credit_score', 'income', 'loan_amount']
 
@@ -28,16 +35,12 @@ def validate_data(df):
     for col in required_cols:
         if col not in df.columns:
             raise ValueError(f"Missing column: {col}")
-
-    # 2. check no nulls in critical columns
-    for col in required_cols:
-        null_count = df[col].isnull().sum()
-        if null_count > 0:
-            raise ValueError(f"Column '{col}' has {null_count} null values")
-
     logging.info("Data validation passed")
     return df
-# Schema Validation
+
+# ─────────────────────────────────────
+# Schema VALIDATION
+# ─────────────────────────────────────
 def enforce_schema(df):
     schema = {
         "customer_id": "int64",
@@ -47,43 +50,65 @@ def enforce_schema(df):
         "credit_score": "float64",
         "default_flag": "int64"
     }
-
     for col, dtype in schema.items():
         df[col] = df[col].astype(dtype)
 
     logging.info("Schema enforcement completed")
     return df
 
-# Data Cleaning 
+# ─────────────────────────────────────
+# DATA Cleaning
+# ─────────────────────────────────────
 def clean_data(df):
     # Created a copy so we don't modify the oroginal dataset unexpectedly
     working_df = df.copy()
+    required_cols = ['credit_score', 'income', 'loan_amount']
 
-    working_df['credit_score'] = working_df['credit_score'].fillna(
-        working_df['credit_score'].median()
-    )
-    # FIXED BUG
+    for col in required_cols:
+        null_count = working_df[col].isnull().sum()
+        null_pct = (null_count/len(working_df)) * 100
+
+        if null_pct == 0:
+            logging.info(f" {col}: no nulls found")
+        elif null_pct <= 20:
+            median_val = working_df[col].median()
+            working_df[col] = working_df[col].fillna(median_val)
+            logging.warning(f"{col} : {null_pct: .1f}% nulls "
+                         f"filled with median ({median_val: .2f})")
+        else:
+            raise ValueError(f"{col} has {null_pct: .1f}%. Investigate souce data")
+
     working_df["is_high_risk"] = np.where(
-        working_df['credit_score'] < 600, 1, 0
-    )
+        working_df['credit_score'] < 600, 1, 0)
+    
     return working_df
 
-# Feature Engineering Layer
+# ─────────────────────────────────────
+# FEATURE ENGINEERING
+# ─────────────────────────────────────
 def feature_engineering(df):
     df['income_to_loan_ratio'] = df['income'] / df['loan_amount']
+    logging.info("Feature engineerng completed.")
     return df
 
-# main pipeline
+# ─────────────────────────────────────
+# FILE PATHS
+# ─────────────────────────────────────
 data_path = "data"
 os.makedirs(data_path, exist_ok= True)
 raw_file_path = os.path.join(data_path, 'loan_customers.csv')
 processed_file_path = os.path.join(data_path, "processed_loan_customers.csv")
 
+# ─────────────────────────────────────
+# MAIN PIPELINE
+# ─────────────────────────────────────
 def main():
     logging.info("Pipeline started")
     df = load_data(raw_file_path)
     df = validate_data(df)
+    df = enforce_schema(df)
     df = clean_data(df)
+    df = feature_engineering(df)
 
     df.to_csv(processed_file_path, index = False)
 
@@ -91,7 +116,9 @@ def main():
     print(f"Success! Find your file here: {os.path.abspath(processed_file_path)}")
 
 
-# entry point
+# ─────────────────────────────────────
+# ENTRY POINT
+# ─────────────────────────────────────
 if __name__ == "__main__":
     main()
 

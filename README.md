@@ -6,8 +6,7 @@ This project analyzes loan customer data to identify high-risk borrowers and imp
 ---
 
 ##  Business Objective
-
-• Predict loan default probability  
+  
 • Identify high-risk customer segments  
 • Improve portfolio risk management  
 • Enable data-driven lending decisions  
@@ -16,10 +15,9 @@ This project analyzes loan customer data to identify high-risk borrowers and imp
 
 ##  Tools & Technologies
 
-• Python (Pandas, NumPy, Scikit-learn, XGBoost)  
-• SQL (SQLite)  
-• Power BI  
-• Jupyter Notebook  
+• Python (Pandas, NumPy)  
+• SQL
+• Power BI    
 
 ---
 

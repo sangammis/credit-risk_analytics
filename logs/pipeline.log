@@ -17,3 +17,20 @@
 2026-03-26 14:14:03,653 : INFO : Data loaded successfully
 2026-03-26 14:14:03,660 : INFO : Data validation passed
 2026-03-26 14:14:03,666 : INFO : Pipeline Complete. Cleaned data saved to: data/processed_loan_customers.csv
+2026-03-26 16:35:46,351 : INFO : Pipeline started
+2026-03-26 16:35:46,357 : INFO : Data loaded successfully
+2026-03-26 16:35:46,359 : INFO : Data validation passed
+2026-03-26 16:35:46,360 : INFO : Schema enforcement completed
+2026-03-26 16:38:15,023 : INFO : Pipeline started
+2026-03-26 16:38:15,032 : INFO : Data loaded successfully
+2026-03-26 16:38:15,033 : INFO : Data validation passed
+2026-03-26 16:38:15,035 : INFO : Schema enforcement completed
+2026-03-26 16:39:43,598 : INFO : Pipeline started
+2026-03-26 16:39:43,604 : INFO : Data loaded successfully
+2026-03-26 16:39:43,605 : INFO : Data validation passed
+2026-03-26 16:39:43,607 : INFO : Schema enforcement completed
+2026-03-26 16:39:43,609 : INFO :  credit_score: no nulls found
+2026-03-26 16:39:43,609 : INFO :  income: no nulls found
+2026-03-26 16:39:43,609 : INFO :  loan_amount: no nulls found
+2026-03-26 16:39:43,610 : INFO : Feature engineerng completed.
+2026-03-26 16:39:43,612 : INFO : Pipeline Complete. Cleaned data saved to: data/processed_loan_customers.csv
