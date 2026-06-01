@@ -2,16 +2,15 @@ import pandas as pd
 import numpy as np
 import logging
 import os
+import boto3
 
 # ─────────────────────────────────────
 # LOGGING SETUP
 # ─────────────────────────────────────
-os.makedirs("logs", exist_ok = True)
+# ✅ Glue uses print() → automatically goes to CloudWatch
 logging.basicConfig(
-    filename="logs/pipeline.log",
-    level = logging.INFO, 
-    format = '%(asctime)s : %(levelname)s : %(message)s')
-
+    level=logging.INFO,
+    format='%(asctime)s : %(levelname)s : %(message)s')
 
 # ─────────────────────────────────────
 # DATA LOADING
@@ -94,11 +93,9 @@ def feature_engineering(df):
 # ─────────────────────────────────────
 # FILE PATHS
 # ─────────────────────────────────────
-data_path = "data"
-os.makedirs(data_path, exist_ok= True)
-raw_file_path = os.path.join(data_path, 'loan_customers.csv')
-processed_file_path = os.path.join(data_path, "processed_loan_customers.csv")
-
+BUCKET_NAME = "credit-risk-data-sngm"
+raw_file_path = f"s3://{BUCKET_NAME}/raw/loan_customers.csv"
+processed_file_path = f"s3://{BUCKET_NAME}/processed/parquet-data/processed_loan_customers.parquet"
 # ─────────────────────────────────────
 # MAIN PIPELINE
 # ─────────────────────────────────────
@@ -110,10 +107,10 @@ def main():
     df = clean_data(df)
     df = feature_engineering(df)
 
-    df.to_csv(processed_file_path, index = False)
+    df.to_parquet(processed_file_path, index = False)
 
     logging.info(f"Pipeline Complete. Cleaned data saved to: {processed_file_path}")
-    print(f"Success! Find your file here: {os.path.abspath(processed_file_path)}")
+    print(f"Success! File saved to: {processed_file_path}")
 
 
 # ─────────────────────────────────────
