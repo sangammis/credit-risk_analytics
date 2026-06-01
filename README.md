@@ -5,91 +5,91 @@ The platform enables risk segmentation, default prediction, and portfolio monito
 
 ## Business Objectives
 
--Identify high-risk borrower segment.s
--Improve portfolio risk management.
--Enable risk-based lending decisions.
--Monitor default trends and portfolio health.
--Provide actionable business insights through analytics dashboards.
+- Identify high-risk borrower segment.s
+- Improve portfolio risk management.
+- Enable risk-based lending decisions.
+- Monitor default trends and portfolio health.
+- Provide actionable business insights through analytics dashboards.
 
 ## Technologies Used
 
 Data Engineering
 
--Databricks
--Apache Spark (PySpark)
--Delta Lake
--Snowflake
+- Databricks
+- Apache Spark (PySpark)
+- Delta Lake
+- Snowflake
 
 Cloud Services
 
--AWS S3
--AWS Glue
--Amazon Athena
+- AWS S3
+- AWS Glue
+- Amazon Athena
 
 Analytics & Reporting
 
--Python
--SQL
--Power BI
+- Python
+- SQL
+- Power BI
 
 Data Processing
 
--Pandas
--NumPy
+- Pandas
+- NumPy
 
 ## Data Pipeline
 
 Bronze Layer
 
--Raw loan customer data stored in Amazon S3
--Initial ingestion into Delta Lake Bronze tables
+- Raw loan customer data stored in Amazon S3
+- Initial ingestion into Delta Lake Bronze tables
 
 Silver Layer
 
--Data cleansing and validation
--Schema enforcement
--Null handling and standardization
--Data quality checks
+- Data cleansing and validation
+- Schema enforcement
+- Null handling and standardization
+- Data quality checks
 
 ## Feature Engineering
 
 Created business-focused credit risk features:
 
--Debt-to-Income (DTI) Ratio.
--Credit Utilization Ratio.
--Risk Bands.
--Loan-to-Income Ratio.
--Customer Risk Categories.
+- Debt-to-Income (DTI) Ratio.
+- Credit Utilization Ratio.
+- Risk Bands.
+- Loan-to-Income Ratio.
+- Customer Risk Categories.
 
 Gold Layer
 
--Aggregated and business-ready datasets
--Risk analytics tables
--Portfolio performance metrics
+- Aggregated and business-ready datasets
+- Risk analytics tables
+- Portfolio performance metrics
 
 Snowflake Analytics Layer
 
--Curated datasets loaded into Snowflake
--SQL-based risk analysis and reporting
--Optimized analytical queries
+- Curated datasets loaded into Snowflake
+- SQL-based risk analysis and reporting
+- Optimized analytical queries
 
 ## Key Analysis Performed
 
--Data ingestion and ETL processing
--Data cleansing and transformation
--Feature engineering
--Credit risk segmentation
--Default trend analysis
--Portfolio risk monitoring
--Business KPI generation
+- Data ingestion and ETL processing
+- Data cleansing and transformation
+- Feature engineering
+- Credit risk segmentation
+- Default trend analysis
+- Portfolio risk monitoring
+- Business KPI generation
 
 ## Key Insights
 
--Contract employees exhibit significantly higher default rates than salaried customers.
--Borrowers with credit scores below 600 demonstrate substantially increased default risk.
--Higher debt-to-income and credit utilization ratios strongly correlate with loan defaults.
--Risk-band segmentation enables proactive identification of high-risk customer groups.
--Portfolio-level monitoring helps improve lending and approval strategies.
+- Contract employees exhibit significantly higher default rates than salaried customers.
+- Borrowers with credit scores below 600 demonstrate substantially increased default risk.
+- Higher debt-to-income and credit utilization ratios strongly correlate with loan defaults.
+- Risk-band segmentation enables proactive identification of high-risk customer groups.
+- Portfolio-level monitoring helps improve lending and approval strategies.
 
 ## Power BI Dashboard Preview
 ![Credit Risk Dashboard](powerbi/Screenshot01.png)
@@ -99,10 +99,10 @@ Snowflake Analytics Layer
   
 ## Business Impact
 
--Built a scalable end-to-end data platform using AWS, Databricks, Delta Lake, Snowflake, and Power BI.
--Automated data ingestion, transformation, and analytics workflows.
--Improved visibility into borrower risk profiles through engineered risk features.
--Enabled data-driven lending decisions through portfolio-level risk monitoring.
--Delivered interactive dashboards for executive and operational reporting.
+- Built a scalable end-to-end data platform using AWS, Databricks, Delta Lake, Snowflake, and Power BI.
+- Automated data ingestion, transformation, and analytics workflows.
+- Improved visibility into borrower risk profiles through engineered risk features.
+- Enabled data-driven lending decisions through portfolio-level risk monitoring.
+- Delivered interactive dashboards for executive and operational reporting.
 
   
